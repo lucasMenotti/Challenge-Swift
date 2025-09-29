@@ -1,0 +1,43 @@
+.nav-tabs {
+    border-bottom: 1px solid var(--cinza-borda);
+}
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--cinza-texto);
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+    border-bottom: 3px solid var(--laranja-principal);
+    color: var(--laranja-principal);
+    font-weight: bold;
+    background: transparent;
+}
+
+.card.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.img-perfil-pequena {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.card .progress {
+    height: 10px;
+}
+
+.card .progress-bar {
+    background-color: var(--laranja-principal);
+}
+
+#graficoPontos {
+    width: 100% !important;
+    max-height: 250px !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-accent-bg: var(--bs-table-striped-bg);
+    color: var(--bs-table-striped-color);
+}

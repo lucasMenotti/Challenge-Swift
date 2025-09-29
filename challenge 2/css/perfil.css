@@ -1,0 +1,103 @@
+.main-content {
+    background-color: var(--main-background);
+}
+
+.main-content .titulo-perfil {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    margin: 0;
+}
+
+.main-content .coins-top {
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.main-content .titulo-config {
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+}
+
+.main-content .icons-perfil {
+    color: var(--laranja-principal);
+}
+
+.main-content .nome-perfil-config {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+
+.main-content .barra-progresso-nivel {
+    height: 0.5625rem; 
+    border-radius: 0.625rem; 
+    background-color: var(--cinza-borda);
+    overflow: hidden;    
+    padding: 0;          
+}
+
+.main-content .barra-progresso-nivel-cor {
+    height: 0.5625rem; 
+    width: 75%;
+    border-radius: 0.625rem; 
+    background-color: var(--laranja-principal);
+    overflow: hidden;    
+    padding: 0;     
+}
+
+.main-content .nivel {
+    font-family: var(--fonte-principal);
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 0.9375rem;
+
+}
+
+.main-content .nivel-porcentagem {
+    font-family: var(--fonte-principal);
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 0.9375rem;
+}
+
+.main-content .texto-perfil {
+    font-family: var(--fonte-principal);
+}
+
+.main-content .button-editar {
+    font-family: var(--fonte-principal);
+    color: var(--preto);
+}
+
+.main-content .button-editar:hover {
+    font-family: var(--fonte-principal);
+    background-color: var(--laranja-principal);
+    color: var(--branco);
+    border-color: var(--laranja-principal);
+}
+
+.main-content .switch-button:checked {
+    background-color: var(--laranja-principal);
+    border-color: var(--laranja-principal);
+}
+
+.main-content .text-notificacoes {
+    font-family: var(--fonte-principal);
+    color: var(--cinza-medio);
+}
+
+.main-content .config-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.main-content .config-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .foto-perfil-config {
+    border: 2px solid var(--laranja-principal);
+}

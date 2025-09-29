@@ -1,0 +1,195 @@
+#dashboard .cabecalho {
+    margin-bottom: 2rem; 
+    flex-wrap: wrap;    
+    gap: 1rem;          
+}
+
+#dashboard .Dashboard h1 {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.75rem; 
+}
+
+#dashboard .SwiftCoins h2,
+#dashboard .Ranking h3 {
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 1.1rem; 
+    white-space: nowrap;
+}
+
+#dashboard .IMGSwiftCoins,
+#dashboard .IMGRanking {
+    width: 24px;
+    height: 24px;
+}
+
+.custom-quad, .custom-ret {
+    display: grid;
+    gap: 1.5rem; 
+    margin: 0; 
+}
+
+.custom-quad {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.custom-ret {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.blocomdc, .blocoapp {
+    background-color: var(--branco);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.blocomdc h2, .blocoapp h2 {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--preto);
+}
+
+.blocomdc > p, .blocoapp > h2 + p { 
+    font-size: 0.8rem; 
+    color: var(--cinza-medio);
+    margin-top: -5px;
+    margin-bottom: 1.5rem;
+}
+
+.blocomdc h3, .blocoapp h3 {
+    font-family: var(--fonte-principal);
+    font-size: 0.9rem; 
+    font-weight: 500;
+    margin: 0.8rem 0 0.2rem 0;
+}
+
+.header-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.header-card .CirculoBase {
+    width: 40px;
+    height: 40px;
+    background-color: var(--laranja-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.header-card .CirculoBase img {
+    width: 22px;
+    height: 22px;
+}
+
+.item-progresso {
+    margin-top: 1rem;
+}
+
+.item-progresso-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.item-progresso-header h3 {
+    margin: 0;
+}
+
+.item-progresso-header h4 {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--cinza-medio);
+    font-weight: 500;
+}
+
+.BarraPorcentagem {
+    width: 100%;
+    height: 10px;
+    background: var(--cinza-borda);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.3rem;
+}
+
+.BarraPorcPreenchida {
+    height: 100%;
+    background-color: var(--laranja-principal);
+    border-radius: 5px;
+}
+
+.item-lista {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.item-lista .CirculoBase {
+    width: 40px;
+    height: 40px;
+    background-color: var(--laranja-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.item-lista .CirculoBase img {
+    width: 22px;
+    height: 22px;
+}
+
+.item-lista-texto h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.item-lista-texto p {
+    margin: 0;
+    color: var(--cinza-medio);
+    font-size: 0.8rem;
+}
+
+.item-lista .item-lista-texto {
+    flex: 1; 
+    min-width: 0; 
+}
+
+.item-com-progresso .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.item-com-progresso .item-header h3 {
+    margin: 0;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.item-com-progresso .item-header h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cinza-medio);
+    margin: 0;
+    padding-left: 1rem; 
+}
+
+.item-com-progresso .BarraPorcentagem {
+    width: 100%;
+}
+

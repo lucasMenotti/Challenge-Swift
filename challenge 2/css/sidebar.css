@@ -1,0 +1,106 @@
+.sidebar-desktop, .sidebar-mobile .offcanvas-body {
+    background-color: var(--branco);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidebar-desktop {
+    min-height: 100vh;
+    width: 250px;
+    border-right: 1.5px solid var(--cinza-borda);
+}
+
+.sidebar-mobile {
+    width: 250px !important;
+    border-right: 1.5px solid var(--cinza-borda);
+}
+
+.logo {
+    color: var(--laranja-principal);
+    font-family: var(--fonte-secundaria);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 0.9375rem;
+    text-decoration: none;
+}
+
+.divider-logo, .divider-perfil, .divider-saida {
+    border: none;
+    border-top: 1px solid var(--cinza-escuro);
+    opacity: 0.2;
+}
+
+.nome-perfil {
+    color: var(--preto);
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.foto-perfil {
+    width: 95px;
+    height: 95px;
+    border: 3px solid var(--laranja-principal);
+}
+
+.titulo-nivel {
+    font-family: var(--fonte-principal);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.barra-progresso-nivel {
+    height: 9px;
+    border-radius: 10px;
+    background-color: var(--cinza-borda);
+}
+
+.barra-progresso-nivel-cor {
+    background-color: var(--laranja-principal);
+    border-radius: 10px;
+}
+
+.nivel, .nivel-porcentagem {
+    font-family: var(--fonte-principal);
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 0.9375rem;
+}
+
+.nav {
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-link {
+    color: var(--cinza-medio);
+    text-decoration: none;
+    font-weight: 400;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link.active {
+    color: var(--laranja-principal) !important;
+    background-color: var(--laranja-claro);
+}
+
+.nav-link i {
+    min-width: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.sair-botao a {
+    text-align: left;
+}

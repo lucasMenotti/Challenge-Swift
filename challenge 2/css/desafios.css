@@ -1,0 +1,271 @@
+.main-content {
+    background-color: var(--main-background);
+}
+
+.main-content .titulo-desafios-semanais {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    margin: 0;
+}
+
+.main-content .coins-top {
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.main-content .banner-destaque-desafios {
+    background-color: var(--laranja-secundario);
+    color: var(--branco);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.875rem;
+}
+
+.main-content .tempo-restante {
+    background-color: var(--box-shadow-2);
+    color: var(--branco);
+    font-size: 0.85rem;
+}
+
+.main-content .banner-coins h3 {
+    margin-bottom: 0;
+    margin-right: 0.9375rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.main-content .divider-banner {
+    border: none;
+    border-top: 1px solid var(--cinza); 
+    margin-bottom: 1.875rem; 
+}
+
+.main-content .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.main-content .card-desafio {
+    background: var(--branco);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.125rem 0.375rem 0.1875rem var(--box-shadow-leve);
+    overflow: hidden;
+    position: relative;
+}
+
+.main-content .card-desafio img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.main-content .conteudo-card {
+    padding: 0.9375rem;
+}
+
+.main-content .card-header-desafio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.main-content .conteudo-card h5 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.main-content .conteudo-card p {
+    font-size: 0.875rem;
+    font-family: var(--fonte-principal);
+    color: var(--cinza-secundario);
+}
+
+.main-content .badge-coins {
+    background: var(--amarelo-claro);
+    border-radius: 0.75rem;
+    padding: 0.1875rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: var(--fonte-principal);
+    color: var(--amarelo);
+    box-shadow: 0 0.125rem 0.375rem 0.0625rem var(--box-shadow);
+    
+}
+
+.main-content .progresso-titulo {
+    font-family: var(--fonte-principal);
+}
+
+.main-content .progresso-titulo-2 {
+    font-family: var(--fonte-principal);
+}
+
+.main-content .progress-bar {
+    width: 100%;
+    height: 0.375rem;
+    background-color: var(--cinza-borda);
+    border-radius: 0.3125rem;
+    margin: 0.3125rem 0;
+    overflow: hidden;
+    
+}
+
+.main-content .progress-bar .progresso {
+    height: 100%;
+    width: 60%;
+    background: var(--laranja-principal);
+}
+
+.main-content .progress-bar .progresso-2 {
+    height: 100%;
+    width: 20%;
+    background: var(--laranja-principal);
+}
+
+.main-content .progress-bar .progresso-3 {
+    height: 100%;
+    width: 40%;
+    background: var(--laranja-principal);
+}
+
+.main-content .btn-acao-continuar {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 10px;
+    background: var(--laranja-principal);
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    font-weight: 550;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-content .btn-acao-aceitar {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.625rem;
+    background: var(--cinza-borda);
+    color: var(--preto);
+    font-family: var(--fonte-secundaria);
+    font-weight: 550;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-acao-continuar:hover {
+    transform: translateY(-0.1875rem);
+    box-shadow: 0 0.25rem 0.75rem var(--box-shadow-leve); 
+}
+
+.btn-acao-aceitar:hover {
+    transform: translateY(-0.1875rem); 
+    box-shadow: 0 0.25rem 0.75rem var(--box-shadow-leve); 
+}
+
+@media (max-width: 1400px) {
+    .sidebar-desktop {
+        display: none !important;
+    }
+    .btn[data-bs-toggle="offcanvas"] {
+        display: inline-block !important;
+    }
+}
+
+
+@media (max-width: 1889px) {
+    .main-content .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-content .banner-destaque {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.9375rem;
+    }
+    .main-content .banner-coins h3 {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .main-content .cards-container {
+        grid-template-columns: 1fr;
+    }
+    .header-desafios {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.625rem;
+    }
+}
+
+.tela {
+    display: none; 
+}
+
+.tela.ativa {
+    display: block; 
+}
+
+
+.banner-destaque-desafios {
+    align-items: center; 
+    padding: 1.5rem 2rem; 
+}
+
+.banner-destaque-desafios .banner-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 50%; 
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+    margin-right: 1.5rem; 
+}
+
+.banner-destaque-desafios .banner-icon-wrapper i {
+    font-size: 2rem; 
+    color: var(--branco); 
+}
+
+.banner-destaque-desafios .banner-badge-tempo {
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 20px; 
+    padding: 0.4rem 0.8rem; 
+    display: inline-flex; 
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--branco);
+    opacity: 1; 
+    font-weight: 500;
+}
+
+.banner-destaque-desafios .banner-conteudo {
+    flex-grow: 1; 
+}
+
+.banner-destaque-desafios .banner-conteudo h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.banner-destaque-desafios .banner-conteudo p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.banner-destaque-desafios .banner-coins {
+    margin-left: 1.5rem; 
+}

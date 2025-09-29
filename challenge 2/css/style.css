@@ -1,0 +1,107 @@
+
+
+:root {
+    --laranja-principal: #DC4405;
+    --laranja-secundario: #e36837ed;
+    --laranja-claro: rgba(220, 68, 5, 0.1);
+    --amarelo: #FFB800;
+    --amarelo-claro: #FFF4E5;
+    --verde-check: #16A34A;
+    --verde-claro-concluido: #DCFCE7;
+    --marrom: #b5692e;
+    --salmao: #eba589;
+
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --cinza-escuro: #2A2929;
+    --cinza-medio: #555;
+    --cinza-texto: #333;
+    --cinza-borda: #ddd;
+    --cinza-fundo: #f8f9fa;
+    --cinza-bloqueado: #C2C1BF;
+
+    --podium-1: #f0cd03;
+    --podium-2: #c2c1bf;
+    --podium-3: #c76a0e;
+    
+    --fonte-principal: 'Inter', sans-serif;
+    --fonte-secundaria: 'Kantumruy Pro', sans-serif;
+    --fonte-poppins: 'Poppins', sans-serif;
+    --fonte-pacifico: 'Pacifico', cursive;
+
+    --box-shadow-leve: rgba(0, 0, 0, 0.1);
+    --box-shadow-media: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --box-shadow-2: rgba(255,255,255,0.2);
+}
+
+body {
+    background-color: var(--cinza-fundo);
+    font-family: var(--fonte-principal);
+    color: var(--cinza-escuro);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.tela {
+    display: none;
+}
+.tela.ativa {
+    display: block;
+}
+
+.main-content {
+    background-color: var(--cinza-fundo);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.page-header h1 {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1; 
+    letter-spacing: normal; 
+    margin: 0;
+    color: var(--cinza-escuro);
+}
+
+.page-header .header-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.page-header .header-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1; 
+    letter-spacing: normal; 
+    color: var(--cinza-escuro);
+    white-space: nowrap;
+}
+
+.page-header .header-meta img {
+    height: 24px;
+    width: auto;
+    margin-right: 8px;
+}

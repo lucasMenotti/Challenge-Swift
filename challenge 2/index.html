@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftHub</title>
+
+    <link rel="website icon" type= "png" href="./assets/SH (1).png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/desafios.css">
+    <link rel="stylesheet" href="css/recompensas.css">
+    <link rel="stylesheet" href="css/ranking.css">
+    <link rel="stylesheet" href="css/historico.css">
+    <link rel="stylesheet" href="css/carreira.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <nav class="sidebar-desktop d-none d-lg-flex flex-column p-3">
+            <h3 class="logo">SwiftHub</h3>
+            <hr class="divider-logo">
+
+            <div class="text-center mb-4">
+                <img src="assets/foto-de-perfil.png" class="foto-perfil rounded-circle mb-2" alt="Foto de perfil">
+                <h6 class="nome-perfil mb-0">Carlos Oliveira</h6>
+                <small class="titulo-nivel text-muted">Consultor Swift</small>
+
+                <div class="d-flex justify-content-between px-2">
+                    <small class="nivel">Nível 2</small>
+                    <small class="nivel-porcentagem">75%</small>
+                </div>
+                <div class="barra-progresso-nivel progress mt-1 mx-2">
+                    <div class="barra-progresso-nivel-cor" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            <hr class="divider-perfil">
+
+            <ul id="desktop-nav" class="nav flex-column flex-grow-1">
+                <li class="nav-item"><a href="#" onclick="mostrarTela('dashboard')" class="nav-link active"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                <li class="nav-item"><a href="#" onclick="mostrarTela('desafios')" class="nav-link"><i class="fa-solid fa-fire"></i> Desafios</a></li>
+                <li class="nav-item"><a href="#" onclick="mostrarTela('recompensas')" class="nav-link"><i class="fa-solid fa-gift"></i> Recompensas</a></li>
+                <li class="nav-item"><a href="#" onclick="mostrarTela('ranking')" class="nav-link"><i class="fa-solid fa-ranking-star"></i> Ranking</a></li>
+                <li class="nav-item"><a href="#" onclick="mostrarTela('carreira')" class="nav-link"><i class="fa-solid fa-briefcase"></i> Carreira</a></li>
+                <li class="nav-item"><a href="#" onclick="mostrarTela('feedback')" class="nav-link"><i class="fa-solid fa-comment-dots"></i> Feedback</a></li>
+                <li class="nav-item"><a href="#" onclick="mostrarTela('perfil')" class="nav-link"><i class="fa-solid fa-user"></i> Meu Perfil</a></li>
+            </ul>
+
+            <hr class="divider-saida">
+            <div class="sair-botao mt-auto">
+                <a href="#" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-start sidebar-mobile" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+            <div class="offcanvas-header justify-content-center position-relative">
+                <h5 class="logo m-0 text-center" id="offcanvasSidebarLabel">SwiftHub</h5>
+                <button type="button" class="btn-close text-reset position-absolute end-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column p-3">
+                <div class="text-center mb-4">
+                    <img src="assets/foto-de-perfil.png" class="foto-perfil rounded-circle mb-2" alt="Foto de perfil">
+                    <h6 class="nome-perfil mb-0">Carlos Oliveira</h6>
+                    <small class="titulo-nivel text-muted">Consultor Swift</small>
+                    <div class="d-flex justify-content-between px-2">
+                        <small class="nivel">Nível 2</small>
+                        <small class="nivel-porcentagem">75%</small>
+                    </div>
+                    <div class="barra-progresso-nivel progress mt-1 mx-2">
+                        <div class="barra-progresso-nivel-cor" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <hr class="divider-perfil">
+                <ul id="mobile-nav" class="nav flex-column flex-grow-1">
+                    <li class="nav-item"><a href="#" onclick="mostrarTela('dashboard')" class="nav-link active" data-bs-dismiss="offcanvas"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                    <li class="nav-item"><a href="#" onclick="mostrarTela('desafios')" class="nav-link" data-bs-dismiss="offcanvas"><i class="fa-solid fa-fire"></i> Desafios</a></li>
+                    <li class="nav-item"><a href="#" onclick="mostrarTela('recompensas')" class="nav-link" data-bs-dismiss="offcanvas"><i class="fa-solid fa-gift"></i> Recompensas</a></li>
+                    <li class="nav-item"><a href="#" onclick="mostrarTela('ranking')" class="nav-link" data-bs-dismiss="offcanvas"><i class="fa-solid fa-ranking-star"></i> Ranking</a></li>
+                    <li class="nav-item"><a href="#" onclick="mostrarTela('carreira')" class="nav-link" data-bs-dismiss="offcanvas"><i class="fa-solid fa-briefcase"></i> Carreira</a></li>
+                    <li class="nav-item"><a href="#" onclick="mostrarTela('feedback')" class="nav-link" data-bs-dismiss="offcanvas"><i class="fa-solid fa-comment-dots"></i> Feedback</a></li>
+                    <li class="nav-item"><a href="#" onclick="mostrarTela('perfil')" class="nav-link" data-bs-dismiss="offcanvas"><i class="fa-solid fa-user"></i> Meu Perfil</a></li>
+                </ul>
+                <hr class="divider-saida">
+                <div class="sair-botao mt-auto">
+                    <a href="#" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="main-content flex-grow-1 p-4">
+            <button class="btn btn-light d-lg-none mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <section id="dashboard" class="tela ativa">
+                <div class="page-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="Dashboard">
+                        <h1 class="m-0">Dashboard</h1>
+                    </div>
+                    <div class="d-flex align-items-center gap-4">
+                        <div class="swift-coins d-flex align-items-center">
+                            <i class="fa-solid fa-coins me-2 text-warning"></i>
+                        <span><strong>1.250</strong> Swift Coins</span>
+                        </div>
+                        <div class="Ranking d-flex align-items-center">
+                            <img src="assets/trofeu-ranking-atual.png" class="IMGRanking me-2" />
+                            <h3 class="m-0">
+                                <span class="TextoRanking d-none d-sm-inline">Ranking: </span>3º lugar
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-quad mt-4">
+                    <div class="blocomdc">
+                        <div class="header-card">
+                            <div>
+                                <h2>Metas do Dia</h2>
+                                <p>08/05/2025</p>
+                            </div>
+                            <div class="CirculoBase">
+                                <img src="assets/circulo-metas-do-dia.png" />
+                            </div>
+                        </div>
+                        <div class="item-progresso">
+                            <div class="item-progresso-header">
+                                <h3>Vendas</h3>
+                                <h4>R$ 2.450 / R$ 3.000</h4>
+                            </div>
+                            <div class="BarraPorcentagem">
+                                <div class="BarraPorcPreenchida" style="width: 82%;"></div>
+                            </div>
+                        </div>
+                        <div class="item-progresso">
+                            <div class="item-progresso-header">
+                                <h3>Cross-sell</h3>
+                                <h4>8 / 10</h4>
+                            </div>
+                            <div class="BarraPorcentagem">
+                                <div class="BarraPorcPreenchida" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="item-progresso">
+                            <div class="item-progresso-header">
+                                <h3>Ticket Médio</h3>
+                                <h4>R$ 175 / R$ 200</h4>
+                            </div>
+                            <div class="BarraPorcentagem">
+                                <div class="BarraPorcPreenchida" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blocomdc">
+                        <div class="header-card">
+                            <div>
+                                <h2>Desafios Ativos</h2>
+                                <p>3 desafios em andamento</p>
+                            </div>
+                            <div class="CirculoBase">
+                                <img src="assets/bandeira-desafios-ativos.png" />
+                            </div>
+                        </div>
+                        <div class="item-progresso">
+                            <div class="item-progresso-header">
+                                <h3>Semana do churrasco</h3>
+                                <h4>3/5</h4>
+                            </div>
+                            <div class="BarraPorcentagem">
+                                <div class="BarraPorcPreenchida" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="item-progresso">
+                            <div class="item-progresso-header">
+                                <h3>NPS Perfeito</h3>
+                                <h4>2/5</h4>
+                            </div>
+                            <div class="BarraPorcentagem">
+                                <div class="BarraPorcPreenchida" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="item-progresso">
+                            <div class="item-progresso-header">
+                                <h3>Combo Completo</h3>
+                                <h4>1/5</h4>
+                            </div>
+                            <div class="BarraPorcentagem">
+                                <div class="BarraPorcPreenchida" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blocomdc">
+                        <div class="header-card">
+                            <div>
+                                <h2>Conquistas Recentes</h2>
+                                <p>Últimas 3 conquistas</p>
+                            </div>
+                            <div class="CirculoBase">
+                                <img src="assets/medalha-conquistas-recentes.png" />
+                            </div>
+                        </div>
+                        <div class="item-lista">
+                            <div class="CirculoBase">
+                                <img src="assets/icone-vendedor-de-elite.png" />
+                            </div>
+                            <div class="item-lista-texto">
+                                <h3>Vendedor de Elite</h3>
+                                <p>5 dias consecutivos batendo meta</p>
+                            </div>
+                        </div>
+                        <div class="item-lista">
+                            <div class="CirculoBase">
+                                <img src="assets/feedback-laranja.png" />
+                            </div>
+                            <div class="item-lista-texto">
+                                <h3>Mestre do Atendimento</h3>
+                                <p>10 avaliações 5 estrelas</p>
+                            </div>
+                        </div>
+                        <div class="item-lista">
+                            <div class="CirculoBase">
+                                <img src="assets/icone-especialista-em-cross-sell.png" />
+                            </div>
+                            <div class="item-lista-texto">
+                                <h3>Especialista em Cross-sell</h3>
+                                <p>20 vendas com 3+ categorias</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-ret mt-4">
+                    <div class="blocoapp">
+                        <h2>Atividades Recentes</h2>
+                        <div class="item-lista">
+                            <div class="CirculoBase">
+                                <img src="assets/icone-coins-laranja.png" />
+                            </div>
+                            <div class="item-lista-texto">
+                                <h3>Você ganhou 50 Swift Coins</h3>
+                                <p>Por completar o desafio "Vencedor da Semana"</p>
+                            </div>
+                        </div>
+                        <div class="item-lista">
+                            <div class="CirculoBase">
+                                <img src="assets/feedback-laranja.png" />
+                            </div>
+                            <div class="item-lista-texto">
+                                <h3>Novo feedback de cliente</h3>
+                                <p>"Atendimento excepcional do Carlos, muito atencioso!"</p>
+                            </div>
+                        </div>
+                        <div class="item-lista">
+                            <div class="CirculoBase">
+                                <img src="assets/trofeu-laranja.png" />
+                            </div>
+                            <div class="item-lista-texto">
+                                <h3>Subiu no ranking!</h3>
+                                <p>Você subiu para o 3º lugar no ranking da loja</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blocoapp">
+                        <h2>Próximos Passos</h2>
+                        <div class="item-lista item-com-progresso">
+                            <div class="CirculoBase">
+                                <img src="assets/icone-especialista-em-cross-sell.png" />
+                            </div>
+                            <div class="item-lista-texto">
+                                <div class="item-header">
+                                    <h3>Completar nível "Consultor Swift"</h3>
+                                    <h4>75%</h4>
+                                </div>
+                                <div class="BarraPorcentagem mt-1">
+                                    <div class="BarraPorcPreenchida" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-lista">
+                            <div class="CirculoBase">
+                                <img src="assets/recompensas-laranja.png" />
+                            </div>
+                            <div class="item-lista-texto">
+                                <h3>Resgate disponível: Kit Swift Premium</h3>
+                                <p>Você tem Swift Coins suficientes!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="desafios" class="tela">
+                <div class="header-desafios d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="titulo-desafios-semanais mb-0">Desafios da Semana</h3>
+                    <div class="swift-coins d-flex align-items-center">
+                        <i class="fa-solid fa-coins me-2 text-warning"></i>
+                        <span><strong>1.250</strong> Swift Coins</span>
+                    </div>
+                </div>
+                <div class="banner-destaque-desafios">
+                    <div class="banner-icon-wrapper"> <i class="fa-solid fa-fire"></i> </div>
+                    <div class="banner-conteudo"> <h5 class="fw-bold">Semana do Churrasco</h5>
+                        <p>Venda combos de carne + acompanhamentos para churrasco e ganhe pontos extras!</p>
+                        <span class="banner-badge-tempo"> <i class="fa-regular fa-clock"></i> Termina em 3 dias
+                        </span>
+                    </div>
+                    <div class="banner-coins">
+                        <h3>200</h3>
+                        <small>Swift Coins</small>
+                    </div>
+                </div>
+                <hr class="divider-banner">
+                <div class="cards-container">
+                    <div class="card-desafio">
+                        <img src="assets/combo-churrasco-completo.jpg" alt="Imagem desafio">
+                        <div class="conteudo-card">
+                            <div class="card-header-desafio">
+                                <h5>Combo Churrasco Completo</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +75 coins
+                                </span>
+                            </div>
+                            <p>Venda 5 combos completos com carne + pão de alho + carvão + temperos.</p>
+                            <small class="progresso-titulo">Progresso</small>
+                            <small class="progresso-titulo-2 float-end">3/5 combos</small>
+                            <div class="progress-bar">
+                                <div class="progresso" style="width: 60%;"></div>
+                            </div>
+                            <button class="btn-acao-continuar">Continuar Desafio</button>
+                        </div>
+                    </div>
+                    <div class="card-desafio">
+                        <img src="assets/nps-perfeito.jpg" alt="Imagem desafio">
+                        <div class="conteudo-card">
+                            <div class="card-header-desafio">
+                                <h5>NPS Perfeito</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +100 coins
+                                </span>
+                            </div>
+                            <p>Receba 5 avaliações 5 estrelas de clientes diferentes esta semana.</p>
+                            <small class="progresso-titulo">Progresso</small>
+                            <small class="progresso-titulo-2 float-end">2/5 avaliações</small>
+                            <div class="progress-bar">
+                                <div class="progresso" style="width: 40%;"></div>
+                            </div>
+                            <button class="btn-acao-continuar">Continuar Desafio</button>
+                        </div>
+                    </div>
+                    <div class="card-desafio">
+                        <img src="assets/campeao-cross-sell.jpg" alt="Imagem desafio">
+                        <div class="conteudo-card">
+                            <div class="card-header-desafio">
+                                <h5>Cross-sell Campeão</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +125 coins
+                                </span>
+                            </div>
+                            <p>Realize 10 vendas com pelo menos 3 categorias diferentes de produtos.</p>
+                            <small class="progresso-titulo">Progresso</small>
+                            <small class="progresso-titulo-2 float-end">4/10 vendas</small>
+                            <div class="progress-bar">
+                                <div class="progresso" style="width: 40%;"></div>
+                            </div>
+                            <button class="btn-acao-continuar">Continuar Desafio</button>
+                        </div>
+                    </div>
+                    <div class="card-desafio">
+                        <img src="assets/ticket-premium.jpg" alt="Imagem desafio">
+                        <div class="conteudo-card">
+                            <div class="card-header-desafio">
+                                <h5>Ticket Premium</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +150 coins
+                                </span>
+                            </div>
+                            <p>Realize 3 vendas com ticket médio acima de R$ 300.</p>
+                            <small class="progresso-titulo">Progresso</small>
+                            <small class="progresso-titulo-2 float-end">0/3 vendas</small>
+                            <div class="progress-bar">
+                                <div class="progresso" style="width: 0%;"></div>
+                            </div>
+                            <button class="btn-acao-aceitar">Aceitar Desafio</button>
+                        </div>
+                    </div>
+                    <div class="card-desafio">
+                        <img src="assets/retire-aqui-promotor.jpg" alt="Imagem desafio">
+                        <div class="conteudo-card">
+                            <div class="card-header-desafio">
+                                <h5>Retire Aqui Promotor</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +80 coins
+                                </span>
+                            </div>
+                            <p>Cadastre 8 clientes no serviço "Retire Aqui" da Swift.</p>
+                            <small class="progresso-titulo">Progresso</small>
+                            <small class="progresso-titulo-2 float-end">0/8 cadastros</small>
+                            <div class="progress-bar">
+                                <div class="progresso" style="width: 0%;"></div>
+                            </div>
+                            <button class="btn-acao-aceitar">Aceitar Desafio</button>
+                        </div>
+                    </div>
+                    <div class="card-desafio">
+                        <img src="assets/especialista-em-praticidade.jpg" alt="Imagem desafio">
+                        <div class="conteudo-card">
+                            <div class="card-header-desafio">
+                                <h5>Especialista em Praticidade</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +90 coins
+                                </span>
+                            </div>
+                            <p>Venda 15 produtos da linha "Pronto para Cozinhar" em uma semana.</p>
+                            <small class="progresso-titulo">Progresso</small>
+                            <small class="progresso-titulo-2 float-end">0/15 produtos</small>
+                            <div class="progress-bar">
+                                <div class="progresso" style="width: 0%;"></div>
+                            </div>
+                            <button class="btn-acao-aceitar">Aceitar Desafio</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recompensas" class="tela">
+                <div class="header-recompensas d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="titulo-recompensas mb-0">Recompensas</h3>
+                    <div class="swift-coins d-flex align-items-center">
+                        <i class="fa-solid fa-coins me-2 text-warning"></i>
+                        <span><strong>1.250</strong> Swift Coins</span>
+                    </div>
+                </div>
+                <div class="banner-destaque-recompensas">
+                    <div class="banner-icon-wrapper">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div class="banner-conteudo">
+                        <h5 class="fw-bold">Troque seus Swift Coins</h5>
+                        <p>Acumule pontos e escolha entre diversos produtos e benefícios exclusivos para colaboradores Swift!</p>
+                    </div>
+                </div>
+                <hr class="divider-banner">
+                <div class="cards-container">
+                    <div class="card-recompensas">
+                        <img src="assets/kit-swift-premium.png" alt="Imagem recompensas">
+                        <div class="conteudo-card">
+                            <div class="card-header-recompensas">
+                                <h5>Kit Swift Premium</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +800 coins
+                                </span>
+                            </div>
+                            <p>Avental, boné, camiseta e acessórios exclusivos Swift.</p>
+                            <button class="btn-acao-resgatar">Resgatar</button>
+                        </div>
+                    </div>
+                    <div class="card-recompensas">
+                        <img src="assets/box-carnes-premium.jpg" alt="Imagem recompensas">
+                        <div class="conteudo-card">
+                            <div class="card-header-recompensas">
+                                <h5>Box Carnes Premium</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +600 coins
+                                </span>
+                            </div>
+                            <p>Seleção especial com os melhores cortes Swift para você.</p>
+                            <button class="btn-acao-resgatar">Resgatar</button>
+                        </div>
+                    </div>
+                    <div class="card-recompensas">
+                        <img src="assets/aula-de-cortes.jpg" alt="Imagem recompensas">
+                        <div class="conteudo-card">
+                            <div class="card-header-recompensas">
+                                <h5>Aula de Cortes</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +500 coins
+                                </span>
+                            </div>
+                            <p>Aula exclusiva com chef especialista em cortes nobres.</p>
+                            <button class="btn-acao-resgatar">Resgatar</button>
+                        </div>
+                    </div>
+                    <div class="card-recompensas">
+                        <img src="assets/kit-facas-profissionais.jpg" alt="Imagem recompensas">
+                        <div class="conteudo-card">
+                            <div class="card-header-recompensas">
+                                <h5>Kit Facas Profissionais</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +1200 coins
+                                </span>
+                            </div>
+                            <p>Conjunto de facas profissionais para preparo de carnes.</p>
+                            <button class="btn-acao-resgatar">Resgatar</button>
+                        </div>
+                    </div>
+                    <div class="card-recompensas">
+                        <img src="assets/vale-compras-de-100.png" alt="Imagem recompensas">
+                        <div class="conteudo-card">
+                            <div class="card-header-recompensas">
+                                <h5>Vale-Compras R$ 100</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +400 coins
+                                </span>
+                            </div>
+                            <p>Vale-compras para utilizar em qualquer loja Swift.</p>
+                            <button class="btn-acao-resgatar">Resgatar</button>
+                        </div>
+                    </div>
+                    <div class="card-recompensas">
+                        <img src="assets/workshop-churrasco.jpg" alt="Imagem recompensas">
+                        <div class="conteudo-card">
+                            <div class="card-header-recompensas">
+                                <h5>Workshop Churrasco</h5>
+                                <span class="badge-coins">
+                                    <i class="fa-solid fa-coins text-warning"></i> +700 coins
+                                </span>
+                            </div>
+                            <p>Workshop completo de churrasco com especialista.</p>
+                            <button class="btn-acao-resgatar">Resgatar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ranking" class="tela">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-bold mb-0">Ranking</h3>
+                    <div class="swift-coins d-flex align-items-center">
+                        <i class="fa-solid fa-coins me-2 text-warning"></i>
+                        <span><strong>1.250</strong> Swift Coins</span>
+                    </div>
+                </div>
+
+                <ul class="nav nav-tabs mt-3" id="rankingTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="loja-morumbi-tab" data-bs-toggle="tab" data-bs-target="#loja-morumbi-pane" type="button" role="tab" aria-controls="loja-morumbi-pane" aria-selected="true">Loja Swift Morumbi</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="ranking-nacional-tab" data-bs-toggle="tab" data-bs-target="#ranking-nacional-pane" type="button" role="tab" aria-controls="ranking-nacional-pane" aria-selected="false">Ranking Nacional</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="historico-tab" data-bs-toggle="tab" data-bs-target="#historico-pane" type="button" role="tab" aria-controls="historico-pane" aria-selected="false">Histórico</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="rankingTabContent">
+                    <div class="tab-pane fade show active" id="loja-morumbi-pane" role="tabpanel" aria-labelledby="loja-morumbi-tab" tabindex="0">
+                        <div class="p-3 my-4 border rounded drop-shadow white-box podium-container">
+                            <div class="d-flex flex-wrap justify-content-center align-items-end gap-4 mb-5">
+                                <div class="text-center">
+                                    <img src="assets/juliana.jpg" class="rounded-circle mb-2">
+                                    <h6>Juliana</h6>
+                                    <p class="mb-1 text-muted">1.320 pts</p>
+                                    <div class="podium podium-2">2</div>
+                                </div>
+                                <div class="text-center">
+                                    <img src="assets/rafael.jpg" class="rounded-circle mb-2">
+                                    <h6>Rafael</h6>
+                                    <p class="mb-1 text-muted">1.580 pts</p>
+                                    <div class="podium podium-1">1</div>
+                                </div>
+                                <div class="text-center">
+                                    <img src="assets/foto-de-perfil.png" class="rounded-circle mb-2">
+                                    <h6>Carlos</h6>
+                                    <p class="mb-1 text-muted">1.250 pts</p>
+                                    <div class="podium podium-3">3</div>
+                                </div>
+                            </div>
+                            <div class="table-responsive table-ranking">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>Posição</th>
+                                            <th>Colaborador</th>
+                                            <th>Nível</th>
+                                            <th>Pontos</th>
+                                            <th>Variação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="badge bg-warning text-dark rounded-circle">1</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/rafael.jpg" class="rounded-circle me-2">
+                                                    <div>
+                                                        <strong>Rafael Souza</strong><br>
+                                                        <small class="text-muted">Especialista de Cortes</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Nível 3</td>
+                                            <td>1.580</td>
+                                            <td class="text-success"><i class="bi bi-arrow-up"></i> 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-secondary rounded-circle">2</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/juliana.jpg" class="rounded-circle me-2">
+                                                    <div>
+                                                        <strong>Juliana Martins</strong><br>
+                                                        <small class="text-muted">Especialista de Cortes</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Nível 3</td>
+                                            <td>1.320</td>
+                                            <td class="text-danger"><i class="bi bi-arrow-down"></i> 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-brown rounded-circle">3</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/foto-de-perfil.png" class="rounded-circle me-2">
+                                                    <div>
+                                                        <strong>Carlos Oliveira</strong><br>
+                                                        <small class="text-muted">Consultor Swift</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Nível 2</td>
+                                            <td>1.250</td>
+                                            <td class="text-success"><i class="bi bi-arrow-up"></i> 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-orange rounded-circle">4</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/ana-beatriz.jpg" class="rounded-circle me-2">
+                                                    <div>
+                                                        <strong>Ana Beatriz</strong><br>
+                                                        <small class="text-muted">Consultor Swift</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Nível 2</td>
+                                            <td>1.180</td>
+                                            <td class="text-danger"><i class="bi bi-arrow-down"></i> 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-orange rounded-circle">5</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/lucas.jpg" class="rounded-circle me-2">
+                                                    <div>
+                                                        <strong>Lucas Ferreira</strong><br>
+                                                        <small class="text-muted">Consultor Swift</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Nível 2</td>
+                                            <td>1.050</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ranking-nacional-pane" role="tabpanel" aria-labelledby="ranking-nacional-tab" tabindex="0">
+                        <div class="p-3 my-4 border rounded drop-shadow white-box podium-container">
+                            <div class="d-flex flex-wrap justify-content-center align-items-end gap-4 mb-5">
+                                <div class="text-center">
+                                    <img src="assets/caio.jpg" class="rounded-circle mb-2">
+                                    <h6>Caio</h6>
+                                    <p class="mb-1 text-muted">2.320 pts</p>
+                                    <div class="podium podium-2">2</div>
+                                </div>
+                                <div class="text-center">
+                                    <img src="assets/rafaela.jpg" class="rounded-circle mb-2">
+                                    <h6>Rafaela</h6>
+                                    <p class="mb-1 text-muted">5.580 pts</p>
+                                    <div class="podium podium-1">1</div>
+                                </div>
+                                <div class="text-center">
+                                    <img src="assets/foto-de-perfil.png" class="rounded-circle mb-2">
+                                    <h6>Carlos</h6>
+                                    <p class="mb-1 text-muted">2.250 pts</p>
+                                    <div class="podium podium-3">3</div>
+                                </div>
+                            </div>
+                            <div class="table-responsive table-ranking">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>Posição</th>
+                                            <th>Colaborador</th>
+                                            <th>Nível</th>
+                                            <th>Pontos</th>
+                                            <th>Variação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="badge bg-warning text-dark rounded-circle">1</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/rafaela.jpg" class="rounded-circle me-2" width="40" height="40">
+                                                    <div>
+                                                        <strong>Rafaela Souza</strong><br>
+                                                        <small class="text-muted">Especialista de Cortes</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Nível 3</td>
+                                            <td>5.580</td>
+                                            <td class="text-success"><i class="bi bi-arrow-up"></i> 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-secondary rounded-circle">2</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/caio.jpg" class="rounded-circle me-2" width="40" height="40">
+                                                    <div>
+                                                        <strong>Caio Junqueira</strong><br>
+                                                        <small class="text-muted">Especialista de Cortes</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Nível 3</td>
+                                            <td>2.320</td>
+                                            <td class="text-danger"><i class="bi bi-arrow-down"></i> 1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="historico-pane" role="tabpanel" aria-labelledby="historico-tab" tabindex="0">
+                        <div class="card p-3 my-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/foto-de-perfil.png" class="rounded-circle me-3 img-perfil-pequena" alt="Perfil">
+                                <div>
+                                    <h6 class="mb-0">Carlos Oliveira</h6>
+                                    <small class="text-muted">Nível 2</small>
+                                    <div class="progress-ranking" style="height: 8px;">
+                                        <div class="progress-ranking-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <small>75% para o próximo nível</small>
+                                </div>
+                            </div>
+                            <canvas id="graficoPontos" class="mt-3"></canvas>
+                        </div>
+                        <div class="card p-3 shadow-sm">
+                            <h5 class="fw-bold mb-3">Registro de Pontuação</h5>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Posição</th>
+                                        <th>Pontos</th>
+                                        <th>Pontos Acumulados</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10/06/2025</td>
+                                        <td>5</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/07/2025</td>
+                                        <td>4</td>
+                                        <td>600</td>
+                                        <td>700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/08/2025</td>
+                                        <td>3</td>
+                                        <td>503</td>
+                                        <td>1.203</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/09/2025</td>
+                                        <td>3</td>
+                                        <td>47</td>
+                                        <td>1.250</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="carreira" class="tela">
+                <header class="main-header d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="titulo-desafios-semanais mb-0">Trilha de Carreira Swift</h3>
+                    <div class="swift-coins">
+                        <i class="fa-solid fa-coins me-1 text-warning"></i>
+                        <span><strong>1.250</strong> Swift Coins</span>
+                    </div>
+                </header>
+                <section class="page-intro">
+                    <div class="intro-icon">
+                        <img src="assets/icone-carreira-laranja.png" alt="Ícone Jornada Profissional">
+                    </div>
+                    <div>
+                        <h2>Sua Jornada Profissional</h2>
+                        <p>Acompanhe sua evolução na Swift e desbloqueie novas oportunidades de crescimento e desenvolvimento.</p>
+                    </div>
+                </section>
+                <section class="career-path">
+                    <div class="career-level concluido">
+                        <div class="level-header">
+                            <div class="level-title-group">
+                                <div class="level-icon">
+                                    <img src="assets/icone-meu-perfil.png" alt="Ícone Iniciante">
+                                </div>
+                                <div class="level-title-text">
+                                    <h3>Iniciante Swift</h3>
+                                </div>
+                            </div>
+                            <div class="status-badge concluido">
+                                <img src="assets/icone-concluido.png" alt="Concluído">
+                                <span>Concluído</span>
+                            </div>
+                        </div>
+                        <p class="level-description">Primeiros passos na Swift, conhecendo produtos, processos e atendimento básico.</p>
+                        <div class="level-content">
+                            <div class="content-column">
+                                <h4>Requisitos</h4>
+                                <ul>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Treinamento básico</li>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> 10 atendimentos</li>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> 5 feedbacks positivos</li>
+                                </ul>
+                            </div>
+                            <div class="content-column">
+                                <h4>Habilidades</h4>
+                                <ul>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Conhecimento básico de produtos</li>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Atendimento ao cliente</li>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Operação de caixa</li>
+                                </ul>
+                            </div>
+                            <div class="content-column">
+                                <h4>Benefícios</h4>
+                                <ul>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Acesso à plataforma SwiftHub</li>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Desconto em produtos Swift</li>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Kit básico Swift</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="career-level em-progresso">
+                        <div class="level-header">
+                            <div class="level-title-group">
+                                <div class="level-icon">
+                                    <img src="assets/icone-feedback.png" alt="Ícone Consultor">
+                                </div>
+                                <div class="level-title-text">
+                                    <h3>Consultor Swift</h3>
+                                </div>
+                            </div>
+                            <div class="status-badge em-progresso">
+                                <img src="assets/icone-progresso.png" alt="Em Progresso">
+                                <span>Em progresso - 75%</span>
+                            </div>
+                        </div>
+                        <p class="level-description">Especialização em atendimento consultivo, conhecimento avançado de produtos e técnicas de venda.</p>
+                        <div class="BarraPorcentagem" style="margin: 1rem 0 1.5rem 0;">
+                            <div class="BarraPorcPreenchida" style="width: 75%;"></div>
+                        </div>
+                        <div class="level-content">
+                            <div class="content-column">
+                                <h4>Requisitos</h4>
+                                <ul>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Completar nível Iniciante</li>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> 50 atendimentos</li>
+                                    <li><img src="assets/icone-progresso.png" class="list-icon" alt="check"> 20 cross-sells (15/20)</li>
+                                    <li><img src="assets/icone-progresso.png" class="list-icon" alt="check"> Treinamento "Cortes Especiais"</li>
+                                </ul>
+                            </div>
+                            <div class="content-column">
+                                <h4>Habilidades</h4>
+                                <ul>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Conhecimento intermediário de cortes</li>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Técnicas de cross-sell</li>
+                                    <li><img src="assets/icone-progresso.png" class="list-icon" alt="check"> Atendimento consultivo</li>
+                                    <li><img src="assets/icone-progresso.png" class="list-icon" alt="check"> Recomendação personalizada</li>
+                                </ul>
+                            </div>
+                            <div class="content-column">
+                                <h4>Benefícios</h4>
+                                <ul>
+                                    <li><img src="assets/icone-concluido.png" class="list-icon" alt="check"> Aumento de 10% em Swift Coins</li>
+                                    <li><img src="assets/icone-progresso.png" class="list-icon" alt="check"> Acesso a recompensas exclusivas</li>
+                                    <li><img src="assets/icone-progresso.png" class="list-icon" alt="check"> Bônus por meta atingida</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="career-level bloqueado card-coluna-unica">
+                        <div class="level-main-icon">
+                            <img src="assets/icone-especialista-em-cortes.png" alt="Ícone Especialista de Cortes">
+                        </div>
+                        <div class="level-main-content">
+                            <div class="level-header">
+                                <h3>Especialista de Cortes</h3>
+                                <div class="status-badge bloqueado">
+                                    <img src="assets/icone-bloqueado.png" alt="Bloqueado">
+                                    <span>Bloqueado</span>
+                                </div>
+                            </div>
+                            <p class="level-description">Domínio completo sobre todos os cortes, técnicas de preparo e harmonização de produtos.</p>
+                            <div class="level-content">
+                                <div class="content-column">
+                                    <h4>Requisitos</h4>
+                                    <ul>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Completar nível Consultor</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> 150 atendimentos</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> 50 cross-sells</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Workshop de Cortes Nobres</li>
+                                    </ul>
+                                </div>
+                                <div class="content-column">
+                                    <h4>Habilidades</h4>
+                                    <ul>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Conhecimento avançado de cortes</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Técnicas de preparo</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Harmonização de produtos</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Liderança de equipe</li>
+                                    </ul>
+                                </div>
+                                <div class="content-column">
+                                    <h4>Benefícios</h4>
+                                    <ul>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Aumento de 20% em Swift Coins</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Participação em eventos especiais</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Possibilidade de promoção</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="career-level bloqueado card-coluna-unica">
+                        <div class="level-main-icon-sabor">
+                            <img src="assets/mestre-do-sabor.png" alt="Ícone Mestre do Sabor">
+                        </div>
+                        <div class="level-main-content">
+                            <div class="level-header">
+                                <h3>Mestre do Sabor</h3>
+                                <div class="status-badge bloqueado">
+                                    <img src="assets/icone-bloqueado.png" alt="Bloqueado">
+                                    <span>Bloqueado</span>
+                                </div>
+                            </div>
+                            <p class="level-description">Nível máximo de excelência, com capacidade de treinar equipes e desenvolver estratégias de venda.</p>
+                            <div class="level-content">
+                                <div class="content-column">
+                                    <h4>Requisitos</h4>
+                                    <ul>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Completar nível Especialista</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> 300 atendimentos</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Top 10% em NPS</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Curso de Liderança Swift</li>
+                                    </ul>
+                                </div>
+                                <div class="content-column">
+                                    <h4>Habilidades</h4>
+                                    <ul>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Expertise em todos os produtos</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Capacidade de treinar equipes</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Desenvolvimento de estratégias</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Mentoria de novos colaboradores</li>
+                                    </ul>
+                                </div>
+                                <div class="content-column">
+                                    <h4>Benefícios</h4>
+                                    <ul>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Aumento de 30% em Swift Coins</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Reconhecimento nacional</li>
+                                        <li><img src="assets/icone-bloqueado.png" class="list-icon" alt="bloqueado"> Prioridade em promoções</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section id="feedback" class="tela">
+                <header class="main-header d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="titulo-desafios-semanais mb-0">Feedback de Clientes</h3>
+                    <div class="swift-coins">
+                        <i class="fa-solid fa-coins me-1 text-warning"></i>
+                        <span><strong>1.250</strong> Swift Coins</span>
+                    </div>
+                </header>
+                <section class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-info">
+                                <h3>NPS Médio</h3>
+                                <p>Últimos 30 dias</p>
+                            </div>
+                            <div class="stat-card-icon">
+                                <img src="assets/icone-nps-medio.png" alt="Ícone de Gráfico">
+                            </div>
+                        </div>
+                        <div class="stat-card-body nps-body">
+                            <span class="stat-value">9.2</span>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <p class="stat-details">de 10 possíveis</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-info">
+                                <h3>Feedbacks Recebidos</h3>
+                                <p>Últimos 30 dias</p>
+                            </div>
+                            <div class="stat-card-icon">
+                                <img src="assets/icone-feedbacks-recebidos.png" alt="Ícone de Chat">
+                            </div>
+                        </div>
+                        <div class="stat-card-body">
+                            <span class="stat-value">28</span>
+                            <p class="stat-details">Média de 0.9 por dia</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-info">
+                                <h3>Coins por Feedback</h3>
+                                <p>Últimos 30 dias</p>
+                            </div>
+                            <div class="stat-card-icon">
+                                <img src="assets/swift-coins-ganhos.png" alt="Ícone de Moedas">
+                            </div>
+                        </div>
+                        <div class="stat-card-body">
+                            <span class="stat-value">420</span>
+                            <p class="stat-details">Coins por feedback positivo</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="recent-feedbacks">
+                    <h2>Feedbacks Recentes</h2>
+                    <div class="feedback-card">
+                        <div class="feedback-top">
+                            <div class="feedback-user">
+                                <div class="avatar"><img src="assets/icone-pessoa-feedback.png" alt="Avatar"></div>
+                                <div class="user-info">
+                                    <p class="user-name">Marcela Rodrigues</p>
+                                    <p class="feedback-date">Hoje, 17:01</p>
+                                </div>
+                            </div>
+                            <div class="feedback-rating">
+                                <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            </div>
+                        </div>
+                        <p class="feedback-body">"Atendimento excepcional do Carlos! Ele me ajudou a escolher os cortes perfeitos para o churrasco de aniversário do meu marido e ainda deu dicas valiosas de preparo. Muito atencioso e conhecedor."</p>
+                        <div class="coin-reward">
+                            <img src="assets/icone-moeda-swift-coins.png" alt="Moeda">
+                            <span>+15 coins</span>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="feedback-top">
+                            <div class="feedback-user">
+                                <div class="avatar"><img src="assets/icone-pessoa-feedback.png" alt="Avatar"></div>
+                                <div class="user-info">
+                                    <p class="user-name">Roberto Almeida</p>
+                                    <p class="feedback-date">Ontem, 16:45</p>
+                                </div>
+                            </div>
+                            <div class="feedback-rating">
+                                <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            </div>
+                        </div>
+                        <p class="feedback-body">"Ótimo atendimento do Carlos. Ele me explicou as diferenças entre os cortes e me ajudou a escolher o melhor para o jantar que eu estava planejando. Também me cadastrou no Retire Aqui, o que vai facilitar muito minhas próximas compras."</p>
+                        <div class="coin-reward">
+                            <img src="assets/icone-moeda-swift-coins.png" alt="Moeda">
+                            <span>+15 coins</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section id="perfil" class="tela">
+                <div class="header-perfil d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="titulo-perfil mb-0">Meu Perfil</h3>
+                    <div class="swift-coins d-flex align-items-center">
+                        <i class="fa-solid fa-coins me-2 text-warning"></i>
+                        <span><strong>1.250</strong> Swift Coins</span>
+                    </div>
+                </div> 
+
+                <div class="container-perfil container-fluid">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card-perfil card shadow text-center p-3 h-100">
+                                <img src="/assets/foto-de-perfil.png" class=" foto-perfil-config rounded-circle mx-auto d-block mb-2" alt="Foto perfil" width="90">
+                                <h5 class="nome-perfil-config mb-0">Carlos Oliveira</h5>
+                                <small class="texto-perfil text-muted">Consultor Swift</small>
+                                <div class="mt-3">
+                                    <div class="d-flex justify-content-between px-2">
+                                        <small class="nivel mb-1">Nível 2</small>
+                                        <small class="nivel-porcentagem mb-1">75%</small>
+                                    </div>
+                                    <div class="barra-progresso-nivel" style="height: 8px;">
+                                        <div class="barra-progresso-nivel-cor" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <button class="button-editar btn btn-outline-secondary mt-3">Editar Perfil</button>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-perfil card shadow p-3 h-100">
+                                <h6 class="titulo-config fw-bold mb-3"><i class="icons-perfil fa-solid fa-chart-line me-2"></i>Estatísticas</h6>
+                                <p class="texto-perfil">Total de Vendas <span class="float-end">R$ 42.850,00</span></p>
+                                <p class="texto-perfil">Ticket Médio <span class="float-end">R$ 175,00</span></p>
+                                <p class="texto-perfil">Taxa de Cross-sell <span class="float-end">65%</span></p>
+                                <p class="texto-perfil">NPS Médio <span class="float-end">9.2/10</span></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-perfil card shadow p-3 h-100">
+                                <h6 class="titulo-config fw-bold mb-3"><i class="icons-perfil fa-solid fa-medal me-2"></i>Conquistas</h6>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="texto-perfil mb-2"><i class="icons-perfil fa-solid fa-check me-2"></i>Vendedor de Elite</li>
+                                    <li class="texto-perfil mb-2"><i class="icons-perfil fa-solid fa-check me-2"></i>Espírito de Equipe</li>
+                                    <li class="texto-perfil mb-2"><i class="icons-perfil fa-solid fa-check me-2"></i>Rei do Churrasco</li>
+                                    <li class="texto-perfil mb-2"><i class="icons-perfil fa-solid fa-check me-2"></i>Mestre do Atendimento</li>
+                                    <li class="texto-perfil"><i class="icons-perfil fa-solid fa-check me-2"></i>Especialista em Cross-sell</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mt-1">
+                        <div class="col-md-6">
+                            <div class="card-perfil card shadow p-3 h-100">
+                                <h6 class="titulo-config fw-bold mb-3"><i class="icons-perfil fa-solid fa-user me-2"></i>Informações Pessoais</h6>
+                                <p class="texto-perfil"><strong>Email:</strong> carlos.oliveira@swift.com.br</p>
+                                <p class="texto-perfil"><strong>Telefone:</strong> (11) 98765-4321</p>
+                                <p class="texto-perfil"><strong>Loja:</strong> Swift Morumbi</p>
+                                <p class="texto-perfil"><strong>Data de Admissão:</strong> 15/01/2024</p>
+                                <p class="texto-perfil"><strong>ID Funcionário:</strong> SW-23456</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card-perfil card shadow p-3 h-100">
+                                <h6 class="titulo-config fw-bold mb-3"><i class="icons-perfil fa-solid fa-gear me-2"></i>Configurações</h6>
+                                <div class="config-item">
+                                    <div class="config-text">
+                                        <span class="texto-perfil">Notificações</span>
+                                        <small class="text-notificacoes">Receber alertas de novos desafios</small>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="switch-button form-check-input" type="checkbox" checked>
+                                    </div>
+                                </div>
+                                <div class="config-item">
+                                    <div class="config-text">
+                                        <span class="texto-perfil">Resumo Semanal</span>
+                                        <small class="text-notificacoes">Receber email com resumo de desempenho</small>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="switch-button form-check-input" type="checkbox" checked>
+                                    </div>
+                                </div>
+                                <div class="config-item">
+                                    <div class="config-text">
+                                        <span class="texto-perfil">Alertas de Ranking</span>
+                                        <small class="text-notificacoes">Notificar quando mudar de posição</small>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="switch-button form-check-input" type="checkbox" checked>
+                                    </div>
+                                </div>
+                                <div class="config-item">
+                                    <div class="config-text">
+                                        <span class="texto-perfil">Modo Escuro</span>
+                                        <small class="text-notificacoes">Alterar aparência do sistema</small>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="switch-button form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+.main-content .fw-bold {
+    font-weight: 600 !important;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--cinza-texto);
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+    border-bottom: 3px solid var(--laranja-principal);
+    color: var(--laranja-principal);
+    font-weight: bold;
+    background: transparent;
+}
+
+.podium-container {
+    background-color: var(--branco);
+    box-shadow: var(--box-shadow-media);
+}
+
+.podium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 16px 16px 0 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--branco);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.podium-1 { 
+    background-color: var(--podium-1); 
+    height: 148px; 
+    width: 168px; 
+}
+
+.podium-2 { 
+    background-color: var(--podium-2); 
+    height: 65px; 
+}
+
+.podium-3 { 
+    background-color: var(--podium-3); 
+    height: 55px; 
+}
+
+.podium-container img.rounded-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--branco);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.podium-container .text-center h6 {
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.table-ranking img.rounded-circle {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.table-ranking .badge {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+}
+
+.bg-brown { 
+    background-color: var(--marrom); 
+    color: var(--branco); 
+}
+
+.bg-orange { 
+    background-color: var(--salmao); 
+    color: var(--branco); 
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.progress-ranking {
+    height: 0.5625rem; 
+    border-radius: 0.625rem; 
+    background-color: var(--cinza-borda);
+    overflow: hidden;    
+    padding: 0; 
+}
+
+.progress-ranking-bar {
+    height: 0.5625rem; 
+    width: 75%;
+    border-radius: 0.625rem; 
+    background-color: var(--laranja-principal);
+    overflow: hidden;    
+    padding: 0;  
+
+}

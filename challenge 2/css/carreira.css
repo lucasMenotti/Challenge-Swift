@@ -1,0 +1,219 @@
+.page-intro {
+    background-color: var(--branco);
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--box-shadow-media);
+}
+
+.page-intro .intro-icon {
+    background-color: var(--laranja-claro);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.page-intro .intro-icon img { 
+    width: 32px; 
+    height: 32px; 
+}
+
+.page-intro h2 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.5rem; 
+    font-weight: 700;  
+}
+
+.page-intro p { 
+    margin: 0; color:
+    var(--cinza-medio); 
+    font-size: 0.9rem; 
+}
+
+.career-level {
+    background-color: var(--branco);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow-media);
+    margin-bottom: 1.5rem;
+}
+
+.level-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+}
+
+.level-title-group { 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
+}
+
+.level-icon { 
+    background-color: 
+    var(--cinza-fundo); 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-shrink: 0; 
+    
+}
+
+.level-icon img { 
+    width: 28px; 
+    height: 28px; 
+    opacity: 0.8; 
+}
+
+.level-title-text h3 {
+    margin: 0;
+    font-size: 1.6rem; 
+    font-weight: 700; 
+}
+
+.level-description { 
+    margin: 0.5rem 0 0 0; 
+    padding-left: 60px; font-size: 0.9rem; 
+    line-height: 1.5; 
+    color: var(--cinza-medio); 
+}
+
+.status-badge { 
+    padding: 0.3rem 0.8rem; 
+    border-radius: 15px; 
+    font-size: 0.8rem; 
+    font-weight: 500; 
+    display: flex; 
+    align-items: center; 
+    gap: 0.4rem; 
+}
+
+.status-badge img { 
+    height: 14px; 
+}
+
+.status-badge.concluido { 
+    background-color: var(--verde-claro-concluido); 
+    color: var(--verde-check); 
+}
+
+.status-badge.em-progresso { 
+    background-color: var(--laranja-claro); 
+    color: var(--laranja-principal); 
+}
+
+.status-badge.bloqueado { 
+    background-color: var(--cinza-fundo); 
+    color: var(--cinza-medio); 
+}
+
+.level-content { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 1rem; 
+    margin-top: 1.5rem; 
+    padding-left: 60px; 
+}
+
+.content-column { 
+    background-color: var(--cinza-fundo); 
+    padding: 1.25rem; 
+    border-radius: 12px; 
+    box-shadow: var(--box-shadow-media);
+}
+
+.content-column h4 { 
+    margin: 0 0 1rem 0; 
+    font-size: 1rem; 
+    font-weight: 600; 
+    color: var(--preto); 
+}
+
+.content-column ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.8rem; 
+}
+
+.content-column li { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.75rem; 
+    color: var(--cinza-escuro); 
+    font-size: 0.9rem; 
+}
+
+.content-column .list-icon { 
+    height: 14px; 
+}
+
+.career-level.bloqueado .content-column { 
+    opacity: 0.7; 
+}
+
+.card-coluna-unica {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.card-coluna-unica .level-main-content h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.card-coluna-unica .level-main-icon {
+    background-color: var(--cinza-fundo);
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow-media);
+}
+
+.card-coluna-unica .level-main-icon-sabor {
+    background-color: var(--cinza-fundo);
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow-media);
+}
+
+.card-coluna-unica .level-main-icon img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+}
+
+.card-coluna-unica .level-main-icon-sabor img {
+    width: 28px;
+    height: 30px;
+    opacity: 0.6;
+}
+
+.card-coluna-unica .level-main-content {
+    flex: 1;
+}
+
+.card-coluna-unica .level-description,
+.card-coluna-unica .level-content {
+    padding-left: 0;
+}
